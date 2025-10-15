@@ -1,0 +1,14 @@
+a[href="/reels/"],
+a[href^="/reels/"],
+a[role="link"][href*="/reels/"],
+[aria-label="Reels"],
+svg[aria-label="Reels"] {
+  display: none !important;
+}
+
+/* Be aggressive against video-based reels cards */
+article:has(video),
+div[role="button"]:has(video),
+div:has(> div > a[href*="/reels/"]) {
+  display: none !important;
+}

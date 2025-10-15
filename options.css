@@ -1,0 +1,8 @@
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+main { max-width: 680px; margin: 48px auto; padding: 24px; }
+h1 { margin-top: 0; font-size: 22px; }
+label { display: block; margin: 10px 0; }
+label.indent { margin-left: 22px; }
+.actions { margin-top: 16px; display: flex; align-items: center; gap: 12px; }
+button { padding: 8px 14px; }
+#status { color: #0a7f2e; font-weight: 600; }

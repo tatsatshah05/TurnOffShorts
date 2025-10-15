@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Turn Off Short Form",
+  "version": "1.0.1",
+  "description": "Hide or redirect YouTube Shorts and Instagram Reels on desktop.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Turn Off Short Form"
+  },
+  "options_page": "options.html",
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://m.youtube.com/*",
+    "https://www.instagram.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/*", "https://m.youtube.com/*"],
+      "js": ["src/common.js", "src/youtube.js"],
+      "css": ["src/youtube.css"],
+      "run_at": "document_start"
+    },
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["src/common.js", "src/instagram.js"],
+      "css": ["src/instagram.css"],
+      "run_at": "document_start"
+    }
+  ]
+}

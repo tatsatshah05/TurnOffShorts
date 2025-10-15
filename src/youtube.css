@@ -1,0 +1,10 @@
+ytd-reel-shelf-renderer,
+ytd-rich-shelf-renderer[is-shorts],
+a[title="Shorts"],
+#endpoint.yt-simple-endpoint[title="Shorts"],
+ytd-guide-entry-renderer a[href^="/shorts"],
+yt-chip-cloud-chip-renderer a[href^="/shorts"],
+a[href^="/shorts"],
+ytd-reel-item-renderer {
+  display: none !important;
+}
